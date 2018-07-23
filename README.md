@@ -18,7 +18,7 @@ For the latest version of our paper, please click [**HERE**](https://github.com/
 ## 2. Usage
 
 ```
-cd path/to/tba    # first enter the project root directory
+cd path/to/tba        # first enter the project root directory
 ```
 
 
@@ -26,11 +26,11 @@ cd path/to/tba    # first enter the project root directory
 
 
 ```
-python scripts/gen_mnist.py     # for MNIST-MOT
+python scripts/gen_mnist.py         # for MNIST-MOT
 
-python scripts/gen_sprite.py    # for Sprites-MOT
+python scripts/gen_sprite.py        # for Sprites-MOT
 
-python scripts/gen_duke.py       # for DukeMTMC
+python scripts/gen_duke.py          # for DukeMTMC
 ```
 
 
@@ -55,7 +55,7 @@ python draw.py
 
 
 
-## 3. Experimental Results
+## 3. Results
 
 
 ### 3.1 MNIST-MOT
