@@ -1,7 +1,9 @@
 # Project Page for NIPS 2018 Submission
 
 Paper ID: 4
+
 Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Attentive Trackers**
+
 For the latest version of our paper, please click [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
 
   
