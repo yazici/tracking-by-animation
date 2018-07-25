@@ -4,9 +4,9 @@ Paper ID: 4
 
 Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Attentive Trackers**
 
-For the latest version of our paper, please click [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
+The latest version of our paper is available [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
 
-  
+
 
 
 ## 1. Requirements
@@ -37,14 +37,14 @@ python scripts/gen_duke.py          # for DukeMTMC
 ### 2.2 Train the model
 
 ```
-python run.py
+python run.py --task mnist        # choose a task from mnist/sprite/duke
 ```
 
 
-### 2.3 Draw training curves
+### 2.3 Show training curves
 
 ```
-python draw.py
+python scripts/show_curve.py --task mnist        # choose a task from mnist/sprite/duke
 ```
 
 
