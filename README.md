@@ -10,47 +10,69 @@ The latest version of our paper is available [**HERE**](https://github.com/anony
 
 
 ## 1. Requirements
-- Python 3.6
-- PyTorch 0.3.1
+- python 3.6
+- pytorch 0.3.1
+- [py-motmetrics](https://github.com/cheind/py-motmetrics) (to evaluate tracking performances)
 
 
 
 ## 2. Usage
 
-```
-cd path/to/tba        # first enter the project root directory
-```
 
-
-### 2.1 Generate data
-
+### 2.1 Generate training data
 
 ```
-python scripts/gen_mnist.py         # for MNIST-MOT
-
-python scripts/gen_sprite.py        # for Sprites-MOT
-
-python scripts/gen_duke.py          # for DukeMTMC
+cd path/to/tba                  # enter the project root directory
+python scripts/gen_mnist.py     # for mnist
+python scripts/gen_sprite.py    # for sprite
+python scripts/gen_duke.py      # for duke
 ```
 
 
 ### 2.2 Train the model
 
+
 ```
-python run.py --task mnist        # choose a task from mnist/sprite/duke
+python run.py --task mnist    # for mnist/sprite/duke
 ```
 
 
 ### 2.3 Show training curves
 
+
 ```
-python scripts/show_curve.py --task mnist        # choose a task from mnist/sprite/duke
+python scripts/show_curve.py --task mnist    # for mnist/sprite/duke
 ```
 
 
+### 2.4 Evaluate tracking performances
 
-### 2.4 Evaluate the tracking performance
+#### a) Generate test data
+```
+python scripts/gen_mnist.py --metric 1         # for mnist
+python scripts/gen_sprite.py --metric 1        # for sprite
+python scripts/gen_duke.py --metric 1 --c 1    # for duke, please run over all cameras by setting c = 1, 2, ..., 8
+```
 
+#### b) Generate tracking results
+```
+python run.py --init sp_latest.pt --metric 1 --task mnist    # for mnist/sprite
+python run.py --init sp_latest.pt --metric 1 --task duke --subtask camera1    # for duke, please run all subtasks from camera1 to camera8
+```
+
+#### c) Convert the results into `.txt`
+```
+python scripts/get_metric_txt.py --task mnist    # for mnist/sprite
+python scripts/get_metric_txt.py --task duke --subtask camera1    # for duke, please run all subtasks from camera1 to camera8
+```
+
+#### d) Evaluate tracking performances
+```
+python -m motmetrics.apps.eval_motchallenge data/mnist/pt result/mnist/tba/default/metric --solver lap      # form mnist
+python -m motmetrics.apps.eval_motchallenge data/sprite/pt result/sprite/tba/default/metric --solver lap    # form sprite
+```
+
+To evaluate duke, please upload the file `result/duke/tba/default/metric/duke.txt` to https://motchallenge.net.
 
 
 
