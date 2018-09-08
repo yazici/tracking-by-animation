@@ -2,17 +2,6 @@
 # Paper ID: 792
 
 
-<!--
-Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Attentive Trackers**
--->
-
-<!--
-The latest version of our paper is available at [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
--->
-
-
-
-
 ## 1. Requirements
 - python 3.6
 - pytorch 0.3.1
