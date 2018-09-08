@@ -1,10 +1,14 @@
-# Project Page for AAAI 2019 Submission
+# Project Page for AAAI 2019 Submission 
+# Paper ID: 792
 
-Paper ID: 792
 
-Paper Title: **tba**
+<!--
+Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Attentive Trackers**
+-->
 
+<!--
 The latest version of our paper is available at [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
+-->
 
 
 
@@ -72,7 +76,7 @@ python -m motmetrics.apps.eval_motchallenge data/mnist/pt result/mnist/tba/defau
 python -m motmetrics.apps.eval_motchallenge data/sprite/pt result/sprite/tba/default/metric --solver lap    # form sprite
 ```
 
-To evaluate duke, please upload the file `result/duke/tba/default/metric/duke.txt` to https://motchallenge.net.
+To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/default/metric/`) to https://motchallenge.net.
 
 
 
@@ -89,5 +93,5 @@ To evaluate duke, please upload the file `result/duke/tba/default/metric/duke.tx
 ### 3.3 DukeMTMC
 
 
-### 3.4 Visualizing and understanding the RAT
+### 3.4 Visualizing the RAT
 
