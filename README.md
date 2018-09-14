@@ -2,6 +2,7 @@
 # Paper ID: 792
 
 
+
 ## 1. Requirements
 - python 3.6
 - pytorch 0.3.1
@@ -26,7 +27,9 @@ python scripts/gen_duke.py      # for duke
 
 
 ```
-python run.py --task mnist    # for mnist/sprite/duke
+python run.py --task mnist     # for mnist
+python run.py --task sprite    # for sprite
+python run.py --task duke      # for duke
 ```
 
 
@@ -34,7 +37,9 @@ python run.py --task mnist    # for mnist/sprite/duke
 
 
 ```
-python scripts/show_curve.py --task mnist    # for mnist/sprite/duke
+python scripts/show_curve.py --task mnist     # for mnist
+python scripts/show_curve.py --task sprite    # for sprite
+python scripts/show_curve.py --task duke      # for duke
 ```
 
 
@@ -49,13 +54,15 @@ python scripts/gen_duke.py --metric 1 --c 1    # for duke, please run over all c
 
 #### b) Generate tracking results
 ```
-python run.py --init sp_latest.pt --metric 1 --task mnist    # for mnist/sprite
+python run.py --init sp_latest.pt --metric 1 --task mnist                     # for mnist
+python run.py --init sp_latest.pt --metric 1 --task sprite                    # for sprite
 python run.py --init sp_latest.pt --metric 1 --task duke --subtask camera1    # for duke, please run all subtasks from camera1 to camera8
 ```
 
 #### c) Convert the results into `.txt`
 ```
-python scripts/get_metric_txt.py --task mnist    # for mnist/sprite
+python scripts/get_metric_txt.py --task mnist     # for mnist
+python scripts/get_metric_txt.py --task sprite    # for sprite
 python scripts/get_metric_txt.py --task duke --subtask camera1    # for duke, please run all subtasks from camera1 to camera8
 ```
 
@@ -70,7 +77,7 @@ To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/defa
 
 
 
-## 3. Results
+## 3. Results (video results will be available soon)
 
 
 ### 3.1 MNIST-MOT
