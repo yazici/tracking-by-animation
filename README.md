@@ -2,7 +2,6 @@
 # Paper ID: 792
 
 
-
 ## 1. Requirements
 - python 3.6
 - pytorch 0.3.1
@@ -61,8 +60,8 @@ python run.py --init sp_latest.pt --metric 1 --task duke --subtask camera1    # 
 
 #### c) Convert the results into `.txt`
 ```
-python scripts/get_metric_txt.py --task mnist     # for mnist
-python scripts/get_metric_txt.py --task sprite    # for sprite
+python scripts/get_metric_txt.py --task mnist                     # for mnist
+python scripts/get_metric_txt.py --task sprite                    # for sprite
 python scripts/get_metric_txt.py --task duke --subtask camera1    # for duke, please run all subtasks from camera1 to camera8
 ```
 
