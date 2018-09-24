@@ -82,10 +82,45 @@ To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/defa
 ### 3.1 MNIST-MOT
 
 
+#### a) Qualitative results
+
+
+
+#### b) Quantitative results (<span style="color:red">updated</span>)
+|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|TBA          |99.6      |99.6     |99.6     |99.5      |78.4      |0        |978     |0       |49      |49      |22       |7         |
+
+
+
 ### 3.2 Sprites-MOT
 
 
+#### a) Qualitative results
+
+
+
+#### b) Quantitative results(<span style="color:red">updated</span>)
+|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|TBA          |99.2      |99.3     |99.2     |99.2      |79.1      |0.01     |985     |1       |60      |80      |30       |22        |
+
+
+
+
 ### 3.3 DukeMTMC
+
+
+#### a) Qualitative results
+
+
+
+#### b) Quantitative results
+|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|TBA          |80.9      |87.8     |75.0     |76.9      |76.2      |0.06     |883     |31      |46,945  |196,753 |469      |1,507     |
+
+
 
 
 ### 3.4 Visualizing the RAT
