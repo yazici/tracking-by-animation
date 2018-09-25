@@ -2,6 +2,9 @@
 # Paper ID: 792
 
 
+
+
+
 ## 1. Requirements
 - python 3.6
 - pytorch 0.3.1
@@ -97,10 +100,10 @@ To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/defa
 
 
 #### a) Qualitative results
+{%vimeo 291638636 %}
 
 
-
-#### b) Quantitative results(<span style="color:red">updated</span>)
+#### b) Quantitative results (<span style="color:red">updated</span>)
 |Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TBA          |99.2      |99.3     |99.2     |99.2      |79.1      |0.01     |985     |1       |60      |80      |30       |22        |
