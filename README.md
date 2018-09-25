@@ -94,7 +94,7 @@ To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/defa
 
 #### a) Qualitative results
 
-<a href="https://vimeo.com/291638636" target="_blank"><img src="https://github.com/anonymous-projects/tracking-by-animation/tree/master/imgs/mnist.gif" width="400"/></a>
+<a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="400"/></a>
 
 
 #### b) Quantitative results (<span style="color:red">updated</span>)
@@ -109,7 +109,7 @@ To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/defa
 
 #### a) Qualitative results
 
-<a href="https://vimeo.com/291639643" target="_blank"><img src="https://github.com/anonymous-projects/tracking-by-animation/tree/master/imgs/sprite.gif" width="400"/></a>
+<a href="https://vimeo.com/291639643" target="_blank"><img src="imgs/sprite.gif" width="400"/></a>
 
 #### b) Quantitative results (<span style="color:red">updated</span>)
 |Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
