@@ -11,17 +11,69 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 -->
 
 
-## 1. Requirements
+## 1. Results (Updated on 25/09/2018)
+
+
+### 1.1 MNIST-MOT
+
+
+
+#### a) Qualitative results
+
+<p align="center">
+<a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a><br/>Click it to watch longer &uarr;
+</p>
+
+#### b) Quantitative results
+|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|TBA          |99.6      |99.6     |99.6     |99.5      |78.4      |0        |978     |0       |49      |49      |22       |7         |
+
+
+
+### 1.2 Sprites-MOT
+
+
+#### a) Qualitative results
+
+<p align="center">
+<a href="https://vimeo.com/291639643" target="_blank"><img src="imgs/sprite.gif" width="500"/></a><br/>Click it to watch longer &uarr;
+</p>
+
+#### b) Quantitative results
+|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|TBA          |99.2      |99.3     |99.2     |99.2      |79.1      |0.01     |985     |1       |60      |80      |30       |22        |
+
+
+
+
+### 1.3 DukeMTMC
+
+
+#### a) Qualitative results
+
+<p align="center">
+<a href="https://vimeo.com/291645071" target="_blank"><img src="imgs/duke.gif" width="500"/></a><br/>Click it to watch longer &uarr;
+</p>
+
+#### b) Quantitative results
+|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|TBA          |80.9      |87.8     |75.0     |76.9      |76.2      |0.06     |883     |31      |46,945  |196,753 |469      |1,507     |
+
+
+## 2. Requirements
 - python 3.6
 - pytorch 0.3.1
 - [py-motmetrics](https://github.com/cheind/py-motmetrics) (to evaluate tracking performances)
 
 
 
-## 2. Usage
+## 3. Usage
 
 
-### 2.1 Generate training data
+### 3.1 Generate training data
 
 ```
 cd path/to/tba                  # enter the project root directory
@@ -31,7 +83,7 @@ python scripts/gen_duke.py      # for duke
 ```
 
 
-### 2.2 Train the model
+### 3.2 Train the model
 
 
 ```
@@ -41,7 +93,7 @@ python run.py --task duke      # for duke
 ```
 
 
-### 2.3 Show training curves
+### 3.3 Show training curves
 
 
 ```
@@ -51,7 +103,7 @@ python scripts/show_curve.py --task duke      # for duke
 ```
 
 
-### 2.4 Evaluate tracking performances
+### 3.4 Evaluate tracking performances
 
 #### a) Generate test data
 ```
@@ -81,61 +133,4 @@ python -m motmetrics.apps.eval_motchallenge data/sprite/pt result/sprite/tba/def
 ```
 
 To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/default/metric/`) to https://motchallenge.net.
-
-
-
-
-## 3. Results (Updated on 25/09/2018)
-
-
-### 3.1 MNIST-MOT
-
-
-
-#### a) Qualitative results
-
-<p align="center">
-<a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a><br/>Click it to watch longer &uarr;
-</p>
-
-#### b) Quantitative results
-|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TBA          |99.6      |99.6     |99.6     |99.5      |78.4      |0        |978     |0       |49      |49      |22       |7         |
-
-
-
-### 3.2 Sprites-MOT
-
-
-#### a) Qualitative results
-
-<p align="center">
-<a href="https://vimeo.com/291639643" target="_blank"><img src="imgs/sprite.gif" width="500"/></a><br/>Click it to watch longer &uarr;
-</p>
-
-#### b) Quantitative results
-|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TBA          |99.2      |99.3     |99.2     |99.2      |79.1      |0.01     |985     |1       |60      |80      |30       |22        |
-
-
-
-
-### 3.3 DukeMTMC
-
-
-#### a) Qualitative results
-
-<p align="center">
-<a href="https://vimeo.com/291645071" target="_blank"><img src="imgs/duke.gif" width="500"/></a><br/>Click it to watch longer &uarr;
-</p>
-
-#### b) Quantitative results
-|Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TBA          |80.9      |87.8     |75.0     |76.9      |76.2      |0.06     |883     |31      |46,945  |196,753 |469      |1,507     |
-
-
-
 
