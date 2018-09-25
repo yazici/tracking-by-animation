@@ -95,8 +95,7 @@ To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/defa
 #### a) Qualitative results
 
 <p align="center">
-<a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a>
-Click it to watch longer &uarr;
+<a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a><br/>Click it to watch longer &uarr;
 </p>
 
 #### b) Quantitative results
