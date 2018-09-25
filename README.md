@@ -2,6 +2,15 @@
 # Paper ID: 792
 
 
+<!--
+Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Attentive Trackers**
+-->
+
+<!--
+The latest version of our paper is available at [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
+-->
+
+
 ## 1. Requirements
 - python 3.6
 - pytorch 0.3.1
@@ -87,6 +96,7 @@ To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/defa
 
 <p align="center">
 <a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a>
+Click it to watch longer &uarr;
 </p>
 
 #### b) Quantitative results
