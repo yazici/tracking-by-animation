@@ -10,8 +10,6 @@ Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Atte
 The latest version of our paper is available at [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
 -->
 
-{%pdf https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf %}
-
 
 ## 1. Results (Updated on 25/09/2018)
 
