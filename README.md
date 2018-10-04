@@ -10,6 +10,8 @@ Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Atte
 The latest version of our paper is available at [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
 -->
 
+{%pdf https://github.com/anonymous-projects/tracking-by-animation/blob/master/pdf/tba.pdf %}
+
 
 ## 1. Results (Updated on 25/09/2018)
 
@@ -133,4 +135,3 @@ python -m motmetrics.apps.eval_motchallenge data/sprite/pt result/sprite/tba/def
 ```
 
 To evaluate duke, please upload the file `duke.txt` (under `result/duke/tba/default/metric/`) to https://motchallenge.net.
-
