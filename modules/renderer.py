@@ -80,7 +80,7 @@ class Renderer(nn.Module):
                                scale_y * trans_y), 1).view(-1, 2, 3) # N * 2 * 3
 
         # Convert to bounding boxes and save
-        if o.metric == 1 and o.v != 1:
+        if o.metric == 1 and o.v == 0:
             bb_conf = y_e.data.view(-1, o.dim_y_e)
             bb_h = h_new.data
             bb_w = w_new.data

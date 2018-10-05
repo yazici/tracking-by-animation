@@ -64,6 +64,3 @@ class LossCalculator(nn.Module):
         log = self.log
         x_not = 1 - x
         return -(x * log(x) + x_not * log(x_not)).sum()
-
-
-

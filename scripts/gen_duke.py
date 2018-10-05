@@ -1,5 +1,3 @@
-# convert .mts to .jpg using mts2jpg.sh
-# get foregound and background images using imbs
 # resize images using gen_duke_processed.py
 # get .pt training data using this file 
 
@@ -32,7 +30,7 @@ T = 20
 H = 108
 W = 192
 D = 3
-train_ratio = 0 if arg.metric == 1 else 0.96
+train_ratio = 0 if arg.metric == 1 else 1
 task = 'duke'
 
 task_dir   = path.join('data', task)
@@ -100,7 +98,7 @@ if arg.metric == 1:
     utils.save_json(frame_map, path.join(output_dir, 'frame_map.json'))
 
 
-core_num = 1 if arg.metric == 1 else 32#multiprocessing.cpu_count()
+core_num = 1 if arg.metric == 1 else multiprocessing.cpu_count()
 print("Running with " + str(core_num) + " cores.")
 def process_batch(split, ST, s, n):
     input_imgs, bg_imgs, org_imgs, bb_npys = [], [], [], []

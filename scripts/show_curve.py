@@ -25,13 +25,27 @@ o = parser.parse_args()
 
 # global variables
 colors = sns.color_palette("Set2", 10)
+# lines = {
+#     'air':        ['AIR',       '*', colors[0]],
+#     'tba_no_occ': ['TBA-noOcc', 's', colors[1]],
+#     'tba_no_mem': ['TBA-noMem', '^', colors[2]],
+#     'tba_no_att': ['TBA-noAtt', 'v', colors[3]],
+#     'tba_no_rep': ['TBA-noRep', 'o', colors[4]],
+#     'tba':        ['TBA',       '<', colors[5]],
+#     'xx1':        ['xx1',       '>', colors[6]],
+#     'xx2':        ['xx2',       'v', colors[7]],
+#     'xx3':        ['xx3',       '.', colors[8]],
+#     'xx4':        ['xx4',       '+', colors[9]]
+# }
 lines = {
     'tba':         ['TBA',        '',  colors[6]],
     'tbac':        ['TBAc',       '.', colors[5]],
     'tbac_no_occ': ['TBAc-noOcc', 'v', colors[2]],
     'tbac_no_att': ['TBAc-noAtt', 'o', colors[1]],
     'tbac_no_mem': ['TBAc-noMem', '^', colors[3]],
-    'tbac_no_rep': ['TBAc-noRep', 's', colors[4]]
+    'tbac_no_rep': ['TBAc-noRep', 's', colors[4]],
+    'xx1':         ['xx1',        '',  colors[7]],
+    'xx2':         ['xx2',        '',  colors[8]],
 }
 plt.rc('lines', linewidth=3, markersize=10)
 plt.rc('axes', labelsize=12)

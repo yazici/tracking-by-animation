@@ -1,4 +1,4 @@
-# use ROIs, resize images, get input, and bg
+# use ROIs, resize images, get input, bb, and bg
 
 import os
 import os.path as path

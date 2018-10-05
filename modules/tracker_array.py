@@ -100,8 +100,10 @@ class NTM(nn.Module):
             r = perm_mat_inv.bmm(r) # N * O * dim_c_2
             att = perm_mat_inv.data[self.ntm_cell.n].mm(att.view(o.O, -1)).view(o.O, -1, self.ntm_cell.wa) # O * ha * wa
             mem = perm_mat_inv.data[self.ntm_cell.n].mm(mem.view(o.O, -1)).view(o.O, -1, self.ntm_cell.wa) # O * ha * wa
-        self.att[self.t].copy_(att)
-        self.mem[self.t].copy_(mem)
+        
+        if o.v > 0:
+            self.att[self.t].copy_(att)
+            self.mem[self.t].copy_(mem)
 
         # Generate outputs
         # h_o = smd.CheckBP('h_o', 0)(h_o)
@@ -174,37 +176,26 @@ class NTMCell(nn.Module):
         self.cosine_similarity = nn.CosineSimilarity(dim=2)
         self.softmax = nn.Softmax(dim=1)
         self.rnn_cell = nn.GRUCell(o.dim_C2_2, o.dim_h_o)
-        self.att_mat = torch.Tensor((1+o.O)*o.dim_C2_1, 1+o.dim_C2_2).cuda()
         self.ha = int(round(np.sqrt(o.dim_C2_1*o.H/o.W)))
         self.wa = int(round(np.sqrt(o.dim_C2_1*o.W/o.H)))
         self.att = torch.Tensor(o.O, self.ha, self.wa).cuda()
         self.mem = torch.Tensor(o.O, self.ha, self.wa).cuda()
-        self.k_mat = torch.Tensor(o.O, o.dim_C2_2).cuda()
-        self.i = 0
-        self.t = 0
-        self.n = 0
+        self.i = 0 # object id
+        self.t = 0 # time
+        self.n = 0 # sample id
 
     def forward(self, h_o_prev, C):
         """
         h_o_prev: N * dim_h_o
         C: N * C2_1 * C2_2
         """
-        # def isnan(t, label):
-        #     if t.data.mean() != t.data.mean():
-        #         print(label, self.t, self.i)
-        #         return True
         o = self.o
         n = self.n
-        # save_dir = path.join(o.pic_dir, str(n))
-        tao = o.batch_id * o.T + self.t
 
-        if self.i == 0:
-            self.att.fill_(0.5)
-            self.mem.fill_(0.5)
-            # self.att_mat.fill_(0)
-            # self.att_mat[0:o.dim_C2_1, 1:o.dim_C2_2+1].copy_(C.data[n])
-            # self.k_mat.fill_(0)
-        if o.v == 1:
+        if o.v > 0:
+            if self.i == 0:
+                self.att.fill_(0.5)
+                self.mem.fill_(0.5)
             self.mem[self.i].copy_(C.data[n].mean(1).view(self.ha, self.wa))
 
         # Addressing key
@@ -227,9 +218,7 @@ class NTMCell(nn.Module):
         r = w1.bmm(C).squeeze(1) # N * C2_2
         # RNN
         h_o = self.rnn_cell(r, h_o_prev)
-        # if self.i == o.O - 1 and self.t == o.T - 1:
-        #     print('h_o: ', h_o.data.min(), h_o.data.mean(), h_o.data.max())
-        #     h_o = smd.CheckBP('h_o')(h_o)
+        
         if "no_mem" not in o.exp_config:
             # Erase vector
             e = self.linear_e(h_o).sigmoid().unsqueeze(1) # N * 1 * C2_2
@@ -239,7 +228,7 @@ class NTMCell(nn.Module):
             w2 = w.unsqueeze(2) # N * C2_1 * 1
             C = C * (1 - w2.bmm(e)) + w2.bmm(v) # N * C2_1 * C2_2
 
-        if o.v == 1:
+        if o.v > 0:
             self.att[self.i].copy_(w.data[n].view(self.ha, self.wa))
- 
+
         return h_o, C, k, r

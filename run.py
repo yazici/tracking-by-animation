@@ -53,13 +53,11 @@ parser.add_argument('--lr_decay_factor', type=float, default=1,
                     help="Learning rate decay factor")
 parser.add_argument('--grad_clip', type=float, default=5,
                     help='Gradient clipping value')
-# Debugging
+# Others
 parser.add_argument('--s', type=int, default=0, choices=[0, 1],
-                    help='Show the running time') # speed benchmark
-parser.add_argument('--d', type=int, default=0, choices=[0, 1],
-                    help="Debugging mode") # debug
-parser.add_argument('--v', type=int, default=0, choices=[0, 1],
-                    help="Visualization") # visualize
+                    help='Benchmark the speed')
+parser.add_argument('--v', type=int, default=0, choices=[0, 1, 2],
+                    help="0: no visualization, 1: show on screen, 2: save to disk")
 o = parser.parse_args()
 
 
@@ -70,12 +68,12 @@ utils.mkdir(result_dir)
 result_file_header = path.join(result_dir, 'sp_')
 if o.metric == 1:
     o.train = 0
-    if o.v == 1:
-        o.pic_dir = path.join('pic', o.task, o.subtask, o.exp, o.model, metric_dir)
-        utils.rmdir(o.pic_dir); utils.mkdir(o.pic_dir)
-    else:
+    if o.v == 0:
         o.result_metric_dir = path.join('result', o.task, o.subtask, o.exp, o.model, metric_dir);
         utils.rmdir(o.result_metric_dir); utils.mkdir(o.result_metric_dir)
+    elif o.v == 2:
+        o.pic_dir = path.join('pic', o.task, o.subtask, o.exp, o.model, metric_dir)
+        utils.rmdir(o.pic_dir); utils.mkdir(o.pic_dir)
 
 
 # Initialize configuration variables
@@ -157,10 +155,7 @@ def load_data(batch_id, split):
     if o.bg == 1:
         X_bg_seq = torch.load(path.join(data_dir, 'bg', filename))
         kwargs['X_bg_seq'] = Variable(X_bg_seq.float().cuda().div_(255), volatile=volatile)
-        if o.metric == 0:
-            bb_seq = torch.load(path.join(data_dir, 'bb', filename))
-            kwargs['bb_seq'] = Variable(bb_seq.float().cuda(), volatile=volatile)
-        else:
+        if o.metric == 1:
             X_org_seq = torch.load(path.join(data_dir, 'org', filename))
             kwargs['X_org_seq'] = Variable(X_org_seq.float().cuda().div_(255), volatile=volatile)
     return X_seq, kwargs
