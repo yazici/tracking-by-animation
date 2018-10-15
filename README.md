@@ -26,7 +26,8 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 #### a) Qualitative results
 
 <p align="center">
-<a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a><br/>Click it to watch longer &uarr;
+  <a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a>
+  <br/>Click it to watch longer &uarr;
 </p>
 
 #### b) Quantitative results
