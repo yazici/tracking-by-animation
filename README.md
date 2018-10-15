@@ -12,7 +12,7 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 
 
 <p align="center">
-<img src="imgs/algo.png" width="500"/><br/>Algorithm of the TBA framework
+<img src="imgs/algo.png" width="700"/><br/>Algorithm of the TBA framework
 </p>
 
 
