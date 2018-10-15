@@ -12,7 +12,8 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 
 
 <p align="center">
-<img src="imgs/algo.png" width="600"/><br/>Algorithm of the TBA framework
+    <img src="imgs/algo.png" width="600"/><br/>
+    Algorithm of the TBA framework
 </p>
 
 
@@ -26,8 +27,8 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 #### a) Qualitative results
 
 <p align="center">
-  <a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a>
-  <br/>Click it to watch longer &uarr;
+    <a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a><br/>
+    Click it to watch longer &uarr;
 </p>
 
 #### b) Quantitative results
@@ -43,7 +44,8 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 #### a) Qualitative results
 
 <p align="center">
-<a href="https://vimeo.com/291639643" target="_blank"><img src="imgs/sprite.gif" width="500"/></a><br/>Click it to watch longer &uarr;
+    <a href="https://vimeo.com/291639643" target="_blank"><img src="imgs/sprite.gif" width="500"/></a><br/>
+    Click it to watch longer &uarr;
 </p>
 
 #### b) Quantitative results
@@ -60,7 +62,8 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 #### a) Qualitative results
 
 <p align="center">
-<a href="https://vimeo.com/291645071" target="_blank"><img src="imgs/duke.gif" width="500"/></a><br/>Click it to watch longer &uarr;
+    <a href="https://vimeo.com/291645071" target="_blank"><img src="imgs/duke.gif" width="500"/></a><br/>
+    Click it to watch longer &uarr;
 </p>
 
 #### b) Quantitative results
