@@ -11,7 +11,12 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 -->
 
 
-## 1. Results (Updated on 25/09/2018)
+<p align="center">
+<img src="imgs/algo.png" width="500"/><br/>Algorithm of the TBA framework
+</p>
+
+
+## 1. Results
 
 
 ### 1.1 MNIST-MOT
