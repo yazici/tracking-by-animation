@@ -26,7 +26,7 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 #### a) Qualitative results
 
 <p align="center">
-    <a href="https://vimeo.com/291638636" target="_blank"><img src="imgs/mnist.gif" width="500"/></a><br/>
+    <a href="https://vimeo.com/295500734" target="_blank"><img src="imgs/mnist.gif" width="500"/></a><br/>
     Click it to watch longer &uarr;<br/>
     Left: input. Middle: reconstruction. Right: memory (Row 1), attention (Row 2), and output (Row 3).
 </p>
@@ -44,7 +44,7 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 #### a) Qualitative results
 
 <p align="center">
-    <a href="https://vimeo.com/291639643" target="_blank"><img src="imgs/sprite.gif" width="500"/></a><br/>
+    <a href="https://vimeo.com/295500903" target="_blank"><img src="imgs/sprite.gif" width="500"/></a><br/>
     Click it to watch longer &uarr;<br/>
     Left: input. Middle: reconstruction. Right: memory (Row 1), attention (Row 2), and output (Row 3).
 </p>
@@ -63,7 +63,7 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 #### a) Qualitative results
 
 <p align="center">
-    <a href="https://vimeo.com/291645071" target="_blank"><img src="imgs/duke.gif" width="500"/></a><br/>
+    <a href="https://vimeo.com/295501114" target="_blank"><img src="imgs/duke.gif" width="500"/></a><br/>
     Click it to watch longer &uarr;<br/>
     Rows 1 and 4: input. Row 2 and 5: reconstruction. Rows 3 and 6: output.
 </p>
