@@ -1,5 +1,5 @@
-# Project Page for AAAI 2019 Submission 
-# Paper ID: 792
+# Project Page for CVPR 2019 Submission 
+# Paper ID: 648
 
 
 Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Attentive Trackers**
@@ -8,12 +8,6 @@ Paper Title: **Tracking by Animation: Unsupervised Learning of Multi-Object Atte
 <!--
 The latest version of our paper is available at [**HERE**](https://github.com/anonymous-projects/tracking-by-animation).
 -->
-
-
-<p align="center">
-    <img src="imgs/algo.png" width="600"/><br/>
-    Algorithm of the TBA framework
-</p>
 
 
 ## 1. Results
@@ -71,7 +65,7 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 #### b) Quantitative results
 |Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TBA          |80.9      |87.8     |75.0     |76.9      |76.2      |0.06     |883     |31      |46,945  |196,753 |469      |1,507     |
+|TBA          |82.0      |85.0     |79.2     |78.0      |80.0      |0.11     |1018     |40      |79,402  |152,336 |803      |1,466     |
 
 
 ## 2. Requirements
