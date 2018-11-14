@@ -66,6 +66,7 @@ The latest version of our paper is available at [**HERE**](https://github.com/an
 |Configuration|IDF1&uarr;|IDP&uarr;|IDR&uarr;|MOTA&uarr;|MOTP&uarr;|FAF&darr;|MT&darr;|ML&darr;|FP&darr;|FN&darr;|IDS&darr;|Frag&darr;|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TBA          |82.0      |85.0     |79.2     |78.0      |80.0      |0.11     |1018     |40      |79,402  |152,336 |803      |1,466     |
+The results are made public at [https://motchallenge.net/results/DukeMTMCT](https://https://motchallenge.net/results/DukeMTMCT) ('MOT\_TBA' with paper ID 648).
 
 
 ## 2. Requirements
